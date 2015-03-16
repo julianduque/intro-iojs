@@ -7,6 +7,13 @@ El futuro brillante de Node.js
 * Es un fork amigable de Node.js™, compatible con [npm](http://npmjs.com), liderado bajo
 un modelo de [open governance](https://github.com/iojs/io.js/blob/v1.x/GOVERNANCE.md#readme)
 
+## Instalando io.js
+
+* Descargar los instaladores oficiales: [http://iojs.org/dist/latest/](http://iojs.org/dist/latest/)
+* Utilizando las [Distribuciones para Linux](https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#io-js) de [NodeSource](http://nodesource.com)
+* Utilizando [nvm](https://github.com/creationix/nvm)
+	* `nvm install iojs`
+
 ## The MIT License (MIT)
 
 Copyright (c) 2015 - Julián Duque
