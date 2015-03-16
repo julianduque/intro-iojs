@@ -14,6 +14,12 @@ un modelo de [open governance](https://github.com/iojs/io.js/blob/v1.x/GOVERNANC
 * Utilizando [nvm](https://github.com/creationix/nvm)
 	* `nvm install iojs`
 
+## Características ES6
+
+* Block Scopes
+	* **const**
+	* **let**
+
 ## The MIT License (MIT)
 
 Copyright (c) 2015 - Julián Duque
