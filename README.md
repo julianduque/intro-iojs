@@ -1,6 +1,11 @@
 # Introducción a io.js
 
-El futuro brillante de Node.js
+El futuro brillante de Node.js 
+
+## ¿Qué es io.js?
+
+* Es un fork amigable de Node.js™, compatible con [npm](http://npmjs.com), liderado bajo
+un modelo de [open governance](https://github.com/iojs/io.js/blob/v1.x/GOVERNANCE.md#readme)
 
 ## The MIT License (MIT)
 
