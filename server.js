@@ -9,6 +9,7 @@ const fs   = require('fs')
 const port   = process.env.PORT || 8080
 const users  = [ 'Luisa', 'Pedro', 'Andrea', 'Juan' ]
 const server = http.createServer()
+const genId  = generateId()
 
 server.on('request', handleRequest)
 server.on('listening', function () {
@@ -26,6 +27,9 @@ function handleRequest(req, res) {
 
   if (uri.startsWith('/users'))
     return handleUsers(req, res)
+
+  if (uri.startsWith('/generate'))
+    return handleGenerate(req, res)
 
   res.setHeader('content-type', 'text/plain')
   res.statusCode = 404
@@ -63,9 +67,22 @@ function handleUsers(req, res) {
   })
 }
 
+function handleGenerate(req, res) {
+  let id = genId.next().value
+
+  res.setHeader('content-type', 'text/plain')
+  res.end(String(id))
+}
+
 function getParams(req) {
   let query = url.parse(req.url).query
   return qs.parse(query)
+}
+
+function* generateId() {
+  let index = 0
+  while (true)
+    yield index++
 }
 
 server.listen(port)
