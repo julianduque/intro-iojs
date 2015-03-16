@@ -7,7 +7,7 @@ const server = http.createServer()
 
 server.on('request', handleRequest)
 server.on('listening', function () {
-  console.log('listening on port ' + port)
+  console.log(`listening on port ${port}`)
 })
 
 function handleRequest(req, res) {
@@ -15,7 +15,7 @@ function handleRequest(req, res) {
 
   res.setHeader('content-type', 'text/plain')
   res.statusCode = 404
-  res.end(url + ' not found')
+  res.end(`${url} not found`)
 }
 
 server.listen(port)

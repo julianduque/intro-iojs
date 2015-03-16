@@ -19,6 +19,7 @@ un modelo de [open governance](https://github.com/iojs/io.js/blob/v1.x/GOVERNANC
 * Block Scopes
 	* **const**
 	* **let**
+* [Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
 
 ## The MIT License (MIT)
 
