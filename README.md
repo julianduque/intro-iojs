@@ -20,6 +20,7 @@ un modelo de [open governance](https://github.com/iojs/io.js/blob/v1.x/GOVERNANC
 	* **const**
 	* **let**
 * [Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
+* [Nuevos métodos de String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object)
 
 ## The MIT License (MIT)
 
