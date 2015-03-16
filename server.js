@@ -7,6 +7,7 @@ const qs   = require('querystring')
 const fs   = require('fs')
 
 const port   = process.env.PORT || 8080
+const users  = [ 'Luisa', 'Pedro', 'Andrea', 'Juan' ]
 const server = http.createServer()
 
 server.on('request', handleRequest)
@@ -22,6 +23,9 @@ function handleRequest(req, res) {
 
   if (uri.startsWith('/repeat'))
     return handleRepeat(req, res)
+
+  if (uri.startsWith('/users'))
+    return handleUsers(req, res)
 
   res.setHeader('content-type', 'text/plain')
   res.statusCode = 404
@@ -43,6 +47,20 @@ function handleRepeat(req, res) {
 
   res.setHeader('content-type', 'text/plain')
   res.end(repeat)
+}
+
+function handleUsers(req, res) {
+  res.setHeader('content-teype', 'application/json')
+
+  var p = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve(users)
+    }, 2000) // Simulamos una operacion I/O
+  })
+
+  p.then(function (users) {
+    res.end(JSON.stringify(users))
+  })
 }
 
 function getParams(req) {
